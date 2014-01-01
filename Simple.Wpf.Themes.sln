@@ -9,6 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Harnesses", "Test Harn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.TestHarness", "Wpf.TestHarness\Wpf.TestHarness.csproj", "{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B017EB04-747B-4613-97AA-D831370EA5F7}"
+	ProjectSection(SolutionItems) = preProject
+		Simple.Wpf.Themes.nupkg = Simple.Wpf.Themes.nupkg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

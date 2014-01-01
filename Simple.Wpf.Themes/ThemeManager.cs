@@ -7,6 +7,9 @@
     using System.Windows.Controls;
     using System.Windows.Threading;
 
+    /// <summary>
+    /// Theme manager for an WPF application.
+    /// </summary>
     public static class ThemeManager
     {
         private static readonly IDictionary<DispatcherObject, ResourceDictionary> CurrentThemes;
@@ -16,13 +19,25 @@
             CurrentThemes = new Dictionary<DispatcherObject, ResourceDictionary>();
         }
 
+        /// <summary>
+        /// The available themes to be applied to a content control or the whole application.
+        /// </summary>
         public static IEnumerable<Theme> AvailableThemes { get; set; }
 
+        /// <summary>
+        /// Applies a theme to the application.
+        /// </summary>
+        /// <param name="theme">The theme to be applied.</param>
         public static void ApplyTheme(Theme theme)
         {
             ApplyThemeImpl(Application.Current, Application.Current.Resources, theme);
         }
 
+        /// <summary>
+        /// Applies a theme to a content control
+        /// </summary>
+        /// <param name="control">The control the theme will be applied to.</param>
+        /// <param name="theme">The theme to be applied</param>
         public static void ApplyTheme(ContentControl control, Theme theme)
         {
             Contract.Requires<ArgumentNullException>(control != null);

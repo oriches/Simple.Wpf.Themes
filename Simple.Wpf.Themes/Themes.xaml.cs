@@ -10,21 +10,34 @@
 
     public partial class Themes : UserControl
     {
+
+        /// <summary>
+        /// The items to be applied to the theme manager.
+        /// </summary>
         public static readonly DependencyProperty ItemsSourceProperty = DependencyProperty.Register("ItemsSource",
             typeof(IEnumerable<Theme>),
             typeof(Themes),
             new PropertyMetadata(Enumerable.Empty<Theme>(), OnItemsSourceChanged));
 
+        /// <summary>
+        /// The currently selected theme.
+        /// </summary>
         public static readonly DependencyProperty SelectedItemProperty = DependencyProperty.Register("SelectedItem",
            typeof(Theme),
            typeof(Themes),
            new PropertyMetadata(null, OnSelectedItemChanged));
 
+        /// <summary>
+        /// The scope the theme will be applied too.
+        /// </summary>
         public static readonly DependencyProperty ScopeProperty = DependencyProperty.Register("Scope",
              typeof(DispatcherObject),
              typeof(Themes),
              new PropertyMetadata(null, OnScopeChanged));
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public Themes()
         {
             InitializeComponent();
@@ -34,18 +47,28 @@
             ThemesComboBox.SelectionChanged += ThemesComboBoxOnSelectionChanged;
         }
 
+
+        /// <summary>
+        /// The bound items to the themes.
+        /// </summary>
         public IEnumerable<Theme> ItemsSource
         {
             get { return (IEnumerable<Theme>)GetValue(ItemsSourceProperty); }
             set { SetValue(ItemsSourceProperty, value); }
         }
 
+        /// <summary>
+        /// The currently selected theme.
+        /// </summary>
         public Theme SelectedItem
         {
             get { return (Theme)GetValue(SelectedItemProperty); }
             set { SetValue(SelectedItemProperty, value); }
         }
 
+        /// <summary>
+        /// The scope the theme will be applied too.
+        /// </summary>
         public DispatcherObject Scope
         {
             get { return (DispatcherObject)GetValue(ScopeProperty); }
