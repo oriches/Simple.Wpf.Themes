@@ -8,9 +8,11 @@
     using System.Windows.Controls;
     using System.Windows.Threading;
 
+    /// <summary>
+    /// The UI control for binding &amp; selecting a theme in an application.
+    /// </summary>
     public partial class Themes : UserControl
     {
-
         /// <summary>
         /// The items to be applied to the theme manager.
         /// </summary>
