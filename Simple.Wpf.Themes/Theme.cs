@@ -5,7 +5,7 @@
     using System.Diagnostics.Contracts;
 
     /// <summary>
-    /// Defines a theme as a Name &amp; and Uri to the ResourceDictionary
+    /// Defines a theme as a Name &amp; a URI to the ResourceDictionary
     /// </summary>
     public sealed class Theme : IEquatable<Theme>
     {

@@ -68,7 +68,7 @@
         }
 
         /// <summary>
-        /// The scope the theme will be applied too.
+        /// The scope the selected theme will be applied too, this could be the application or a content control.
         /// </summary>
         public DispatcherObject Scope
         {

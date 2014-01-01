@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Diagnostics.Contracts;
+    using System.Linq;
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Threading;
@@ -30,6 +31,12 @@
         /// <param name="theme">The theme to be applied.</param>
         public static void ApplyTheme(Theme theme)
         {
+            var localThemes = AvailableThemes ?? Enumerable.Empty<Theme>();
+            if (localThemes.All(x => x != theme))
+            {
+                throw new ArgumentException("Unknown theme!");
+            }
+
             ApplyThemeImpl(Application.Current, Application.Current.Resources, theme);
         }
 
@@ -41,6 +48,12 @@
         public static void ApplyTheme(ContentControl control, Theme theme)
         {
             Contract.Requires<ArgumentNullException>(control != null);
+
+            var localThemes = AvailableThemes ?? Enumerable.Empty<Theme>();
+            if (localThemes.All(x => x != theme))
+            {
+                throw new ArgumentException("Unknown theme!");
+            }
 
             ApplyThemeImpl(control, control.Resources, theme);
         }
