@@ -9,4 +9,9 @@
                 Value="White" />
     </Style>
     
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="FontStyle"
+                Value="Italic" />
+    </Style>
+    
 </ResourceDictionary>

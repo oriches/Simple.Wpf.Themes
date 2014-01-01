@@ -9,4 +9,9 @@
                 Value="Black" />
     </Style>
 
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="FontWeight"
+                Value="Bold" />
+    </Style>
+
 </ResourceDictionary>

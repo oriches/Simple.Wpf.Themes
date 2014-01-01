@@ -20,22 +20,18 @@
 
         public static void ApplyTheme(Theme theme)
         {
-            Contract.Requires<ArgumentNullException>(theme != null);
-
             ApplyThemeImpl(Application.Current, Application.Current.Resources, theme);
         }
 
         public static void ApplyTheme(ContentControl control, Theme theme)
         {
             Contract.Requires<ArgumentNullException>(control != null);
-            Contract.Requires<ArgumentNullException>(theme != null);
 
             ApplyThemeImpl(control, control.Resources, theme);
         }
 
         private static void ApplyThemeImpl(DispatcherObject @object, ResourceDictionary resources, Theme theme)
         {
-            Contract.Requires<ArgumentNullException>(theme != null);
             Contract.Requires<ArgumentNullException>(resources != null);
 
             ResourceDictionary current;
@@ -45,7 +41,7 @@
 
             }
 
-            if (theme.Uri != null)
+            if (theme != null && theme.Uri != null)
             {
                 var resourceDictionary = Application.LoadComponent(theme.Uri) as ResourceDictionary;
                 if (resourceDictionary != null)

@@ -26,6 +26,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <Button x:Name="OneButton"
@@ -37,6 +38,11 @@
                         Grid.Row="1"
                         Margin="5"
                         Content="Example Two" />
+                
+                <TextBlock x:Name="ExampleTextBlock"
+                           Grid.Row="2"
+                           Margin="5"
+                           Text="This is some example text..."/>
                 
             </Grid>
             

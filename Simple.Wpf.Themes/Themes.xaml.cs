@@ -6,6 +6,7 @@
     using System.Linq;
     using System.Windows;
     using System.Windows.Controls;
+    using System.Windows.Threading;
 
     public partial class Themes : UserControl
     {
@@ -18,6 +19,11 @@
            typeof(Theme),
            typeof(Themes),
            new PropertyMetadata(null, OnSelectedItemChanged));
+
+        public static readonly DependencyProperty ScopeProperty = DependencyProperty.Register("Scope",
+             typeof(DispatcherObject),
+             typeof(Themes),
+             new PropertyMetadata(null, OnScopeChanged));
 
         public Themes()
         {
@@ -38,6 +44,20 @@
         {
             get { return (Theme)GetValue(SelectedItemProperty); }
             set { SetValue(SelectedItemProperty, value); }
+        }
+
+        public DispatcherObject Scope
+        {
+            get { return (DispatcherObject)GetValue(ScopeProperty); }
+            set { SetValue(ScopeProperty, value); }
+        }
+
+        private static void OnScopeChanged(DependencyObject d, DependencyPropertyChangedEventArgs args)
+        {
+            if (args.OldValue == args.NewValue)
+            {
+                return;
+            }
         }
         
         private static void OnItemsSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs args)
@@ -63,6 +83,28 @@
 
         private static void OnSelectedItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs args)
         {
+            if (args.OldValue == args.NewValue)
+            {
+                return;
+            }
+
+            var newTheme = args.NewValue as Theme;
+
+            var themes = (Themes)d;
+            themes.UpdateTheme(newTheme);
+        }
+
+        private void ThemesComboBoxOnSelectionChanged(object sender, SelectionChangedEventArgs selectionChangedEventArgs)
+        {
+            if (Scope == null || Scope is Application)
+            {
+                ThemeManager.ApplyTheme((Theme)ThemesComboBox.SelectedItem);
+            }
+            else if (Scope != null || Scope is ContentControl)
+            {
+                var contentControl = (ContentControl)Scope;
+                ThemeManager.ApplyTheme(contentControl, (Theme)ThemesComboBox.SelectedItem);
+            }
         }
 
         private void UpdateItems(Theme[] themes)
@@ -75,9 +117,15 @@
             ThemesComboBox.SelectedItem = themes.First();
         }
 
-        private void ThemesComboBoxOnSelectionChanged(object sender, SelectionChangedEventArgs selectionChangedEventArgs)
+        private void UpdateTheme(Theme newTheme)
         {
-            ThemeManager.ApplyTheme((Theme)ThemesComboBox.SelectedItem);
+            ThemesComboBox.SelectedItem = null;
+
+            var existingTheme = ThemeManager.AvailableThemes.SingleOrDefault(x => x.Name == newTheme.Name);
+            if (existingTheme != null)
+            {
+                ThemesComboBox.SelectedItem = existingTheme;
+            }
         }
     }
 }
