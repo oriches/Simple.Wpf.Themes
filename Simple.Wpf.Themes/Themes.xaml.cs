@@ -35,10 +35,10 @@
         public static readonly DependencyProperty ScopeProperty = DependencyProperty.Register("Scope",
              typeof(DispatcherObject),
              typeof(Themes),
-             new PropertyMetadata(null, OnScopeChanged));
+             new PropertyMetadata(null));
 
         /// <summary>
-        /// Default constructor
+        /// Default constructor.
         /// </summary>
         public Themes()
         {
@@ -49,9 +49,8 @@
             ThemesComboBox.SelectionChanged += ThemesComboBoxOnSelectionChanged;
         }
 
-
         /// <summary>
-        /// The bound items to the themes.
+        /// The bound items to the themes control, this will be of type Theme.
         /// </summary>
         public IEnumerable<Theme> ItemsSource
         {
@@ -77,14 +76,6 @@
             set { SetValue(ScopeProperty, value); }
         }
 
-        private static void OnScopeChanged(DependencyObject d, DependencyPropertyChangedEventArgs args)
-        {
-            if (args.OldValue == args.NewValue)
-            {
-                return;
-            }
-        }
-        
         private static void OnItemsSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs args)
         {
             if (args.OldValue == args.NewValue)
