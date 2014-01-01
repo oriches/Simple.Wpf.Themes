@@ -35,6 +35,9 @@
 
         private static void ApplyThemeImpl(DispatcherObject @object, ResourceDictionary resources, Theme theme)
         {
+            Contract.Requires<ArgumentNullException>(theme != null);
+            Contract.Requires<ArgumentNullException>(resources != null);
+
             ResourceDictionary current;
             if (CurrentThemes.TryGetValue(@object, out current))
             {

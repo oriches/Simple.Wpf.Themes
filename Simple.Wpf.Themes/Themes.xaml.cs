@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.Contracts;
     using System.Linq;
     using System.Windows;
     using System.Windows.Controls;
@@ -54,20 +55,24 @@
                 return;
             }
 
+            var themesArray = newEnum.ToArray();
+
             var themes = (Themes)d;
-            themes.UpdateItems(newEnum);
+            themes.UpdateItems(themesArray);
         }
 
         private static void OnSelectedItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs args)
         {
         }
 
-        private void UpdateItems(IEnumerable<Theme> newEnum)
+        private void UpdateItems(Theme[] themes)
         {
-            ThemesComboBox.ItemsSource = newEnum;
-            ThemeManager.AvailableThemes = newEnum;
+            Contract.Requires<ArgumentNullException>(themes != null);
 
-            ThemesComboBox.SelectedItem = newEnum.First();
+            ThemesComboBox.ItemsSource = themes;
+            ThemeManager.AvailableThemes = themes;
+
+            ThemesComboBox.SelectedItem = themes.First();
         }
 
         private void ThemesComboBoxOnSelectionChanged(object sender, SelectionChangedEventArgs selectionChangedEventArgs)
