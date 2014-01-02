@@ -139,7 +139,7 @@
         private void UpdateTheme(Theme newTheme)
         {
             var existingTheme = ThemeManager.AvailableThemes.SingleOrDefault(x => x.Name == newTheme.Name);
-            ThemesComboBox.SelectedItem = existingTheme ?? null;
+            ThemesComboBox.SelectedItem = existingTheme;
         }
     }
 }
