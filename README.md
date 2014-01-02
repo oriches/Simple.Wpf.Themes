@@ -3,7 +3,9 @@ Simple.Wpf.Themes
 
 A simple theme manager with optional UI user control for use in an WPF application - all you need is a set of URIs for the resource dictionaries you want to use as the themes for the application.
 
-The repo contains 2 test harnesses, one code-behind and the other an MVVM implementation, these are detailed below.
+The repo contains 2 test harnesses, one code-behind and the other an MVVM implementation, these are detailed below the test harness screen shots.
+
+![alt text](https://raw.github.com/oriches/Simple.Wpf.Themes/master/Readme%20Images/test%20harness.png "Screen shots of theme test harness")
 
 ## Code behind implementation
 This example creates an array of Theme objects in the constructor of the code behind for the main window and this is then set to the ItemsSource of the Theme user control. The user control uses a static ThemeManager class internally to manipulate the current theme.
