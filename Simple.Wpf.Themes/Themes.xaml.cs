@@ -83,15 +83,18 @@
                 return;
             }
 
-            var oldEnum = args.OldValue as IEnumerable<Theme>;
-            var newEnum = args.NewValue as IEnumerable<Theme>;
-
-            if (oldEnum.SequenceEqual(newEnum))
+            if (args.OldValue != null && args.NewValue != null)
             {
-                return;
+                var oldEnum = (IEnumerable<Theme>)args.OldValue;
+                var newEnum = (IEnumerable<Theme>)args.NewValue;
+
+                if (oldEnum.SequenceEqual(newEnum))
+                {
+                    return;
+                }
             }
 
-            var themesArray = newEnum.ToArray();
+            var themesArray = args.NewValue == null ? new Theme[0] : ((IEnumerable<Theme>)args.NewValue).ToArray();
 
             var themes = (Themes)d;
             themes.UpdateItems(themesArray);
@@ -135,13 +138,8 @@
 
         private void UpdateTheme(Theme newTheme)
         {
-            ThemesComboBox.SelectedItem = null;
-
             var existingTheme = ThemeManager.AvailableThemes.SingleOrDefault(x => x.Name == newTheme.Name);
-            if (existingTheme != null)
-            {
-                ThemesComboBox.SelectedItem = existingTheme;
-            }
+            ThemesComboBox.SelectedItem = existingTheme ?? null;
         }
     }
 }
