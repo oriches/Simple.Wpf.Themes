@@ -3,6 +3,14 @@ Simple.Wpf.Themes
 
 A simple theme manager with optional UI user control for use in an WPF application - all you need is a set of URIs for the resource dictionaries you want to use as the themes for the application.
 
+Currently we support the following .Net versions:
+
+Supported versions:
+
+	.NET framework 4.0 and higher,
+	
+This library is available as a nuget [package] (https://www.nuget.org/packages/Simple.Wpf.Themes/).
+
 The repo contains 2 test harnesses, one code-behind and the other an MVVM implementation, these are detailed below the test harness screen shots.
 
 ![alt text](https://raw.github.com/oriches/Simple.Wpf.Themes/master/Readme%20Images/test%20harness.png "Screen shots of theme test harness")
