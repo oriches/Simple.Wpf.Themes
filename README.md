@@ -21,9 +21,9 @@ The theme manager allows theme is to be applied to either the application scope 
 
 The theme manager is used by the theme user control, the theme control is a simple drop down list which you are resonsible for populating but when a theme is selected it is applied to specified scope. The theme control has threee dependency properties:
 
-1. ItemsSource - binding an IEnumerable&lt;Theme&gt; to the drop down list,
-2. SelectedItem - the currently selected theme,
-3. Scope - the scope the theme will be applied too, this would be NULL for application scope or the user control.
+1. **ItemsSource** - binding an IEnumerable&lt;Theme&gt; to the drop down list,
+2. **SelectedItem** - the currently selected theme,
+3. **Scope** - the control theme will be applied too, this would be NULL for application scope or the user control.
 
 Example of the these being used:
 
