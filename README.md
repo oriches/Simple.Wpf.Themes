@@ -3,6 +3,8 @@ Simple.Wpf.Themes
 
 A simple theme manager with optional UI user control for use in an WPF application - all you need is a set of URIs for the resource dictionaries you want to use as the themes for the application.
 
+For more information about the releases see [Release Info] (https://github.com/oriches/Simple.Wpf.Themes/wiki/Release-Info).
+
 Currently we support the following .Net versions:
 
 Supported versions:
