@@ -13,7 +13,7 @@ Supported versions:
 	
 This library is available as a nuget [package] (https://www.nuget.org/packages/Simple.Wpf.Themes/).
 
-The repo contains 2 test harnesses, one code-behind and the other an MVVM implementation, these are detailed below the test harness screen shots.
+Shown below is the library in action, you can see the Theme user control at the top - drop down list. As the user selects a different theme the styles of the controls below are updated.
 
 ![alt text](https://raw.github.com/oriches/Simple.Wpf.Themes/master/Readme%20Images/test%20harness.png "Screen shots of theme test harness")
 
