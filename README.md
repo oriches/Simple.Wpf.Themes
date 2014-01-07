@@ -38,9 +38,9 @@ Example of the these being used:
     <themes:Themes x:Name="ThemesControl"
                     Grid.Row="0"
                     Margin="5"
-                    **Scope"{Element ElementName=StyleGrid}"**
-                    **ItemsSource="{Binding Path=Themes,Mode=OneWay}"** 
-                    **SelectedItem="{Binding Path=SelectedTheme, Mode=TwoWay}"** />
+                    Scope"{Element ElementName=StyleGrid}"
+                    ItemsSource="{Binding Path=Themes,Mode=OneWay}" 
+                    SelectedItem="{Binding Path=SelectedTheme, Mode=TwoWay}" />
                     
     <Grid x:Name="StyledGrid"
     	  Grid.Row="1">
