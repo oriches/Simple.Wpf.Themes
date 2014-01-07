@@ -52,6 +52,6 @@ Example of the these being used:
 </Grid>
 ```
 
-Shown below is the library in action, you can see the Theme user control at the top - drop down list. As the user selects a different theme the styles of the controls below are updated.
+Shown below is the library in action, you can see the Theme user control at the top - drop down list. As the user selects a different theme the styles of the controls below are updated, this is taken from the test harness in the repo.
 
 ![alt text](https://raw.github.com/oriches/Simple.Wpf.Themes/master/Readme%20Images/test%20harness.png "Screen shots of theme test harness")
