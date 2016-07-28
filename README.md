@@ -1,6 +1,13 @@
 Simple.Wpf.Themes
 =================
 
+https://ci.appveyor.com/api/projects/status/y22t42l84bl915eg/branch/master?svg=true
+
+[![Build status](https://ci.appveyor.com/api/projects/status/y22t42l84bl915eg/branch/master?svg=true)](https://ci.appveyor.com/project/oriches/simple-wpf-themes)
+
+As with all my 'important' stuff it builds using the amazing [AppVeyor](https://ci.appveyor.com/project/oriches/simple-wpf-themes).
+
+
 A simple theme manager with optional UI user control for use in an WPF application - all you need is a set of URIs for the resource dictionaries you want to use as the themes for the application.
 
 For more information about the releases see [Release Info] (https://github.com/oriches/Simple.Wpf.Themes/wiki/Release-Info).
