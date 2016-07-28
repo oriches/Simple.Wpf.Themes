@@ -12,12 +12,6 @@ A simple theme manager with optional UI user control for use in an WPF applicati
 
 For more information about the releases see [Release Info] (https://github.com/oriches/Simple.Wpf.Themes/wiki/Release-Info).
 
-Currently we support the following .Net versions:
-
-Supported versions:
-
-	.NET framework 4.0 and higher,
-	
 This library is available as a nuget [package] (https://www.nuget.org/packages/Simple.Wpf.Themes/).
 
 You can skip the intro and go straight to the [Getting Started] (https://github.com/oriches/Simple.Wpf.Themes/wiki/Getting-Started) guide
