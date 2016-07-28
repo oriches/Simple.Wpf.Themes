@@ -16,8 +16,6 @@ This library is available as a nuget [package] (https://www.nuget.org/packages/S
 
 You can skip the intro and go straight to the [Getting Started] (https://github.com/oriches/Simple.Wpf.Themes/wiki/Getting-Started) guide
 
-# Introduction
-
 The theme manager allows theme is to be applied to either the application scope or at a user control scope in the visual tree, the later means only UI content in the user control or child controls will be styled with the theme.
 
 The theme manager is used by the theme user control, the theme control is a simple drop down list which you are resonsible for populating but when a theme is selected it is applied to specified scope. The theme control has threee dependency properties:
