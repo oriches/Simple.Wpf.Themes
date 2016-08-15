@@ -1,7 +1,8 @@
-﻿namespace Simple.Wpf.Themes
+namespace Simple.Wpf.Themes
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.Diagnostics.Contracts;
     using System.Linq;
     using System.Windows;
@@ -42,6 +43,8 @@
         /// </summary>
         public Themes()
         {
+            Contract.ContractFailed += HandleContractFailed;
+
             InitializeComponent();
 
             ThemesComboBox.DisplayMemberPath = "Name";
@@ -130,16 +133,34 @@
         {
             Contract.Requires<ArgumentNullException>(themes != null);
 
+            if (DesignerProperties.GetIsInDesignMode(this))
+            {
+                return;
+            }
+
             ThemesComboBox.ItemsSource = themes;
             ThemeManager.AvailableThemes = themes;
 
             ThemesComboBox.SelectedItem = themes.First();
         }
-
+        
         private void UpdateTheme(Theme newTheme)
         {
+            if (DesignerProperties.GetIsInDesignMode(this))
+            {
+                return;
+            }
+
             var existingTheme = ThemeManager.AvailableThemes.SingleOrDefault(x => x.Name == newTheme.Name);
             ThemesComboBox.SelectedItem = existingTheme;
+        }
+
+        private void HandleContractFailed(object sender, ContractFailedEventArgs args)
+        {
+            if (DesignerProperties.GetIsInDesignMode(this))
+            {
+                args.SetHandled();
+            }
         }
     }
 }
