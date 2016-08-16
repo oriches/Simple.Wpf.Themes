@@ -1,7 +1,7 @@
 Simple.Wpf.Themes
 =================
 
-[![Build status](https://ci.appveyor.com/api/projects/status/y22t42l84bl915eg/branch/master?svg=true)](https://ci.appveyor.com/project/oriches/simple-wpf-themes)
+[![Build status](https://ci.appveyor.com/api/projects/status/phsoyw14q1iykvdq/branch/master?svg=true)](https://ci.appveyor.com/project/oriches/simple-wpf-themes)
 
 As with all my 'important' stuff it builds using the amazing [AppVeyor](https://ci.appveyor.com/project/oriches/simple-wpf-themes).
 
