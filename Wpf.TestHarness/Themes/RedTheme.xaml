@@ -9,6 +9,15 @@
                 Value="Black" />
     </Style>
 
+    <Style x:Key="ExplicitButton"
+           TargetType="{x:Type Button}"
+           BasedOn="{x:Null}">
+        <Setter Property="Background"
+                Value="Yellow" />
+        <Setter Property="Foreground"
+                Value="Black" />
+    </Style>
+
     <Style TargetType="{x:Type TextBlock}">
         <Setter Property="FontWeight"
                 Value="Bold" />

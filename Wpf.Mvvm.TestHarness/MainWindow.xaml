@@ -44,7 +44,8 @@
                 <Button x:Name="TwoButton"
                         Grid.Row="1"
                         Margin="5"
-                        Content="Example Two" />
+                        Content="Example Two"
+                        Style="{DynamicResource ExplicitButton}" />
 
                 <TextBlock x:Name="ExampleTextBlock"
                            Grid.Row="2"

@@ -16,7 +16,7 @@
         {
             Themes = new[]
                      {
-                         new Theme("No theme (default)", null),
+                         new Theme("Default theme", new Uri("/Wpf.TestHarness;component/Themes/DefaultTheme.xaml", UriKind.Relative)),
                          new Theme("Red theme", new Uri("/Wpf.Mvvm.TestHarness;component/Themes/RedTheme.xaml", UriKind.Relative)),
                          new Theme("Blue theme", new Uri("/Wpf.Mvvm.TestHarness;component/Themes/BlueTheme.xaml", UriKind.Relative))
                      };
@@ -24,7 +24,7 @@
             _selectedTheme = Themes.First();
         }
 
-        public IEnumerable<Theme> Themes { get; private set; }
+        public IEnumerable<Theme> Themes { get; }
 
         public Theme SelectedTheme
         {
@@ -41,11 +41,7 @@
 
         private void OnPropertyChanged(string propertyName)
         {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

@@ -7,6 +7,6 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <ComboBox x:Name="ThemesComboBox"
               HorizontalAlignment="Stretch"
-              HorizontalContentAlignment="Left">
-    </ComboBox>
+              HorizontalContentAlignment="Left" />
 </UserControl>
+

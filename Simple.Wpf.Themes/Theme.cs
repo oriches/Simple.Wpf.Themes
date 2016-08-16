@@ -12,7 +12,7 @@
         /// <summary>
         /// The humna readable name of the theme
         /// </summary>
-        public string Name { get; private set; }
+        public string Name { get; }
 
         /// <summary>
         /// The URI of the theme ResourceDictionary
@@ -100,18 +100,13 @@
 
             public int GetHashCode(Theme obj)
             {
-                return (obj.Name != null ? obj.Name.GetHashCode() : 0);
+                return obj.Name?.GetHashCode() ?? 0;
             }
         }
 
-        private static readonly IEqualityComparer<Theme> NameComparerInstance = new NameEqualityComparer();
-
         /// <summary>
-        /// Theme equality comparer/
+        /// Theme equality comparer
         /// </summary>
-        public static IEqualityComparer<Theme> NameComparer
-        {
-            get { return NameComparerInstance; }
-        }
+        public static IEqualityComparer<Theme> NameComparer { get; } = new NameEqualityComparer();
     }
 }

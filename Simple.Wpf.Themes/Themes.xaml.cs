@@ -12,7 +12,7 @@ namespace Simple.Wpf.Themes
     /// <summary>
     /// The UI control for binding &amp; selecting a theme in an application.
     /// </summary>
-    public partial class Themes : UserControl
+    public partial class Themes
     {
         /// <summary>
         /// The items to be applied to the theme manager.
@@ -97,7 +97,7 @@ namespace Simple.Wpf.Themes
                 }
             }
 
-            var themesArray = args.NewValue == null ? new Theme[0] : ((IEnumerable<Theme>)args.NewValue).ToArray();
+            var themesArray = ((IEnumerable<Theme>) args.NewValue)?.ToArray() ?? new Theme[0];
 
             var themes = (Themes)d;
             themes.UpdateItems(themesArray);

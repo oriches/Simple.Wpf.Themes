@@ -8,7 +8,16 @@
         <Setter Property="Foreground"
                 Value="White" />
     </Style>
-    
+
+    <Style x:Key="ExplicitButton"
+           TargetType="{x:Type Button}"
+           BasedOn="{x:Null}">
+        <Setter Property="Background"
+                Value="Green" />
+        <Setter Property="Foreground"
+                Value="White" />
+    </Style>
+
     <Style TargetType="{x:Type TextBlock}">
         <Setter Property="FontStyle"
                 Value="Italic" />
