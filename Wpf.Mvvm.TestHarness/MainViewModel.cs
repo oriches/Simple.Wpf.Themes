@@ -16,7 +16,6 @@
         {
             Themes = new[]
                      {
-                         new Theme("Default theme", new Uri("/Wpf.TestHarness;component/Themes/DefaultTheme.xaml", UriKind.Relative)),
                          new Theme("Red theme", new Uri("/Wpf.Mvvm.TestHarness;component/Themes/RedTheme.xaml", UriKind.Relative)),
                          new Theme("Blue theme", new Uri("/Wpf.Mvvm.TestHarness;component/Themes/BlueTheme.xaml", UriKind.Relative))
                      };
@@ -28,10 +27,7 @@
 
         public Theme SelectedTheme
         {
-            get
-            {
-                return _selectedTheme;
-            }
+            get => _selectedTheme;
             set
             {
                 _selectedTheme = value;

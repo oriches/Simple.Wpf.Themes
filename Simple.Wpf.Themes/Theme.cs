@@ -1,39 +1,41 @@
-﻿namespace Simple.Wpf.Themes
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics.Contracts;
+﻿using System;
+using System.Collections.Generic;
 
+namespace Simple.Wpf.Themes
+{
     /// <summary>
-    /// Defines a theme as a Name &amp; a URI to the ResourceDictionary
+    ///     Defines a theme as a Name &amp; a URI to the ResourceDictionary
     /// </summary>
     public sealed class Theme : IEquatable<Theme>
     {
         /// <summary>
-        /// The humna readable name of the theme
-        /// </summary>
-        public string Name { get; }
-
-        /// <summary>
-        /// The URI of the theme ResourceDictionary
-        /// </summary>
-        public Uri Uri { get; private set; }
-
-        /// <summary>
-        /// Create a theme class
+        ///     Create a theme class
         /// </summary>
         /// <param name="name">The name of theme.</param>
         /// <param name="uri">The URI of the ResourceDictionary.</param>
         public Theme(string name, Uri uri)
         {
-            Contract.Requires<ArgumentNullException>(name != null);
-
             Name = name;
             Uri = uri;
         }
 
         /// <summary>
-        /// Determines whether two themes instances are equal.
+        ///     The humna readable name of the theme
+        /// </summary>
+        public string Name { get; }
+
+        /// <summary>
+        ///     The URI of the theme ResourceDictionary
+        /// </summary>
+        public Uri Uri { get; }
+
+        /// <summary>
+        ///     Theme equality comparer
+        /// </summary>
+        public static IEqualityComparer<Theme> NameComparer { get; } = new NameEqualityComparer();
+
+        /// <summary>
+        ///     Determines whether two themes instances are equal.
         /// </summary>
         /// <param name="other">The theme to compare with the current theme.</param>
         /// <returns>true if the specified theme is equal to the current theme; otherwise, false.</returns>
@@ -45,7 +47,7 @@
         }
 
         /// <summary>
-        /// Determines whether two object instances are equal.
+        ///     Determines whether two object instances are equal.
         /// </summary>
         /// <param name="obj">The object to compare with the current theme.</param>
         /// <returns>true if the specified object is equal to the current theme; otherwise, false.</returns>
@@ -53,11 +55,11 @@
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            return obj is Theme && Equals((Theme)obj);
+            return obj is Theme && Equals((Theme) obj);
         }
 
         /// <summary>
-        /// Serves as the default hash function.
+        ///     Serves as the default hash function.
         /// </summary>
         /// <returns>A hash code for the current theme.</returns>
         public override int GetHashCode()
@@ -66,7 +68,7 @@
         }
 
         /// <summary>
-        /// The equality operator (==) returns true if its operands are equal, false otherwise.
+        ///     The equality operator (==) returns true if its operands are equal, false otherwise.
         /// </summary>
         /// <param name="left"></param>
         /// <param name="right"></param>
@@ -77,7 +79,7 @@
         }
 
         /// <summary>
-        /// The inequality operator (!=) returns false if its operands are equal, true otherwise.
+        ///     The inequality operator (!=) returns false if its operands are equal, true otherwise.
         /// </summary>
         /// <param name="left"></param>
         /// <param name="right"></param>
@@ -103,10 +105,5 @@
                 return obj.Name?.GetHashCode() ?? 0;
             }
         }
-
-        /// <summary>
-        /// Theme equality comparer
-        /// </summary>
-        public static IEqualityComparer<Theme> NameComparer { get; } = new NameEqualityComparer();
     }
 }

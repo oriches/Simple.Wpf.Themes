@@ -1,7 +1,6 @@
 ﻿namespace Wpf.TestHarness
 {
     using System;
-    using System.Windows;
     using Simple.Wpf.Themes;
 
     public partial class MainWindow
