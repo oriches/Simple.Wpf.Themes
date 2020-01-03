@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Version>2.3.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\.net standard\Simple.Wpf.Themes.Common\Simple.Wpf.Themes.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Themes.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Themes.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

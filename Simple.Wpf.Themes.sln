@@ -3,18 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Wpf.Themes", "Simple.Wpf.Themes\Simple.Wpf.Themes.csproj", "{BB415D28-1202-4220-BB96-F61C14455B7C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Harnesses", "Test Harnesses", "{541B85F3-F0CB-4E7B-B0A8-07BC8E4097BA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.TestHarness", "Wpf.TestHarness\Wpf.TestHarness.csproj", "{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B017EB04-747B-4613-97AA-D831370EA5F7}"
 	ProjectSection(SolutionItems) = preProject
 		Simple.Wpf.Themes.nupkg = Simple.Wpf.Themes.nupkg
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.Mvvm.TestHarness", "Wpf.Mvvm.TestHarness\Wpf.Mvvm.TestHarness.csproj", "{548F3071-F228-4174-9C09-FB388B38CCE1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".net core", ".net core", "{6264A874-F9E7-4A58-80D6-62F296124B4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".net framework", ".net framework", "{60376EE1-A49E-4CEF-AD78-55F657EEF960}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".net standard", ".net standard", "{FECC9FFA-4664-4DD0-91A1-633E20A5801F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Wpf.Themes", ".net framework\Simple.Wpf.Themes\Simple.Wpf.Themes.csproj", "{BB415D28-1202-4220-BB96-F61C14455B7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.Mvvm.TestHarness", ".net framework\Wpf.Mvvm.TestHarness\Wpf.Mvvm.TestHarness.csproj", "{548F3071-F228-4174-9C09-FB388B38CCE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.TestHarness", ".net framework\Wpf.TestHarness\Wpf.TestHarness.csproj", "{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.Wpf.Themes.Common", ".net standard\Simple.Wpf.Themes.Common\Simple.Wpf.Themes.Common.csproj", "{FE34D063-D214-415A-82C1-50582A6CB0C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.Wpf.Themes", ".net core\Simple.Wpf.Themes\Simple.Wpf.Themes.csproj", "{8CF18BF5-309B-42FE-975B-8A7356E3CDF1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.Mvvm.TestHarness", ".net core\Wpf.Mvvm.TestHarness\Wpf.Mvvm.TestHarness.csproj", "{B7BD5AB7-28F2-47BC-A703-3EF624AA239A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf.TestHarness", ".net core\Wpf.TestHarness\Wpf.TestHarness.csproj", "{EFD0B00E-F7CB-4DEE-A20F-E4903BBC2E3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,20 +38,44 @@ Global
 		{BB415D28-1202-4220-BB96-F61C14455B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB415D28-1202-4220-BB96-F61C14455B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB415D28-1202-4220-BB96-F61C14455B7C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{548F3071-F228-4174-9C09-FB388B38CCE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{548F3071-F228-4174-9C09-FB388B38CCE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{548F3071-F228-4174-9C09-FB388B38CCE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{548F3071-F228-4174-9C09-FB388B38CCE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE34D063-D214-415A-82C1-50582A6CB0C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE34D063-D214-415A-82C1-50582A6CB0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE34D063-D214-415A-82C1-50582A6CB0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE34D063-D214-415A-82C1-50582A6CB0C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF18BF5-309B-42FE-975B-8A7356E3CDF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF18BF5-309B-42FE-975B-8A7356E3CDF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF18BF5-309B-42FE-975B-8A7356E3CDF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF18BF5-309B-42FE-975B-8A7356E3CDF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7BD5AB7-28F2-47BC-A703-3EF624AA239A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BD5AB7-28F2-47BC-A703-3EF624AA239A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BD5AB7-28F2-47BC-A703-3EF624AA239A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BD5AB7-28F2-47BC-A703-3EF624AA239A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD0B00E-F7CB-4DEE-A20F-E4903BBC2E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD0B00E-F7CB-4DEE-A20F-E4903BBC2E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD0B00E-F7CB-4DEE-A20F-E4903BBC2E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD0B00E-F7CB-4DEE-A20F-E4903BBC2E3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B} = {541B85F3-F0CB-4E7B-B0A8-07BC8E4097BA}
-		{548F3071-F228-4174-9C09-FB388B38CCE1} = {541B85F3-F0CB-4E7B-B0A8-07BC8E4097BA}
+		{BB415D28-1202-4220-BB96-F61C14455B7C} = {60376EE1-A49E-4CEF-AD78-55F657EEF960}
+		{548F3071-F228-4174-9C09-FB388B38CCE1} = {60376EE1-A49E-4CEF-AD78-55F657EEF960}
+		{B0E44BF3-4FC3-42F3-B7A3-4FCA669A871B} = {60376EE1-A49E-4CEF-AD78-55F657EEF960}
+		{FE34D063-D214-415A-82C1-50582A6CB0C0} = {FECC9FFA-4664-4DD0-91A1-633E20A5801F}
+		{8CF18BF5-309B-42FE-975B-8A7356E3CDF1} = {6264A874-F9E7-4A58-80D6-62F296124B4B}
+		{B7BD5AB7-28F2-47BC-A703-3EF624AA239A} = {6264A874-F9E7-4A58-80D6-62F296124B4B}
+		{EFD0B00E-F7CB-4DEE-A20F-E4903BBC2E3A} = {6264A874-F9E7-4A58-80D6-62F296124B4B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B5B37FD-C825-409B-A79B-6D971D35093A}
 	EndGlobalSection
 EndGlobal
