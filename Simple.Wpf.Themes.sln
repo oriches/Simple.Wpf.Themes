@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B017EB04-747B-4613-97AA-D831370EA5F7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget spec", ".nuget spec", "{B017EB04-747B-4613-97AA-D831370EA5F7}"
 	ProjectSection(SolutionItems) = preProject
-		Simple.Wpf.Themes.nupkg = Simple.Wpf.Themes.nupkg
+		Simple.Wpf.Themes.nuspec = Simple.Wpf.Themes.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".net core", ".net core", "{6264A874-F9E7-4A58-80D6-62F296124B4B}"
