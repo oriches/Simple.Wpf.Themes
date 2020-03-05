@@ -1,6 +1,7 @@
 Simple.Wpf.Themes
 =================
 
+[![NuGet](https://img.shields.io/nuget/v/simple.wpf.themes.svg)](https://github.com/oriches/simple.wpf.themes)
 [![Build status](https://ci.appveyor.com/api/projects/status/phsoyw14q1iykvdq/branch/master?svg=true)](https://ci.appveyor.com/project/oriches/simple-wpf-themes)
 
 Supported versions:
